@@ -1,0 +1,81 @@
+* {
+  transition: 0.5s all;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #999;
+}
+.parent {
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+input {
+  width: 50px;
+  outline: none;
+  border: 0.5px solid #99999997;
+  border-radius: 3px;
+  height: 20px;
+  
+}
+label {
+  font-size: 12px;
+  color: #4e4c4c;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.day,
+.month,
+.year {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+hr {
+  width: 90%;
+}
+button {
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: purple;
+}
+button i {
+  font-size: 25px;
+  color: white;
+  font-weight: 300px;
+}
+button:hover {
+  box-shadow: 0 5px 30px purple;
+}
+ul {
+  padding-right: 15px;
+  font-size: 30px;
+  font-weight: bolder;
+  list-style: none;
+}
+ul li {
+  margin-bottom:20px;
+}
+span {
+  color: purple;
+  font-size: 30px;
+  font-weight: bolder;
+}
