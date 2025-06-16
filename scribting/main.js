@@ -1,6 +1,4 @@
-let btn = document.querySelector("button");
-
-btn.onclick = function () {
+document.querySelector("button").onclick = function () {
   let year = document.getElementById("year").value;
   let month = document.getElementById("month").value;
   let day = document.getElementById("day").value;
@@ -23,15 +21,14 @@ btn.onclick = function () {
     full--;
     sumMonth += 12;
   }
-
   // =====================================================
   // styling Day
   let stDay = document.querySelector("#day");
   let stDayLe = document.querySelector(".lableDay");
   let spanDays = document.querySelector(".spanDays");
   //  Cheek Input Day
-  let edit = parseInt(day);
-  if (day.length == "" || day.length >= 3 || isNaN(edit)) {
+  let edit = /^\d+$/;
+  if (day.length == "" || day.length >= 3 || !edit.test(day)) {
     stDay.style.borderColor = "red";
     stDayLe.style.color = "red";
     spanDays.style.display = "block";
@@ -48,8 +45,8 @@ btn.onclick = function () {
   let spanMonths = document.querySelector(".spanMonths");
 
   //  Cheek Input Month
-  let editMonth = parseInt(month);
-  if (month.length == "" || month.length >= 3 || isNaN(editMonth)) {
+  let editMonth = /^\d+$/;
+  if (month.length == "" || month.length >= 3 || !editMonth.test(month)) {
     stMonth.style.borderColor = "red";
     stMonthLe.style.color = "red";
     spanMonths.style.display = "block";
@@ -64,12 +61,12 @@ btn.onclick = function () {
   let stYearLe = document.querySelector(".lableYear");
   let spanYears = document.querySelector(".spanYears");
   //  Cheek Input Month
-  let editYear = parseInt(year);
+  let editYear = /^\d+$/;
   if (
     year.length == "" ||
     year.length > 4 ||
     year.length < 4 ||
-    isNaN(editYear)
+    !editYear.test(year)
   ) {
     stYear.style.borderColor = "red";
     stYearLe.style.color = "red";
@@ -80,5 +77,14 @@ btn.onclick = function () {
     spanYears.style.display = "none";
     document.querySelector(".spanYear").innerHTML = `${full} `;
   }
-  console.log();
 };
+// CLASS Active
+let allInput = document.querySelectorAll("input");
+allInput.forEach(function (inp) {
+  inp.addEventListener("click", function () {
+    allInput.forEach(function (remove) {
+      remove.classList.remove("active");
+    });
+    this.classList.add("active");
+  });
+});

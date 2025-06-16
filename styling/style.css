@@ -8,25 +8,26 @@ body {
   display: flex;
   justify-content: center;
   padding: 1%;
+
 }
 .parent {
   width: 100%;
   background-color: white;
-  border-radius:  10px 70px;
+  border-radius: 10px 70px;
   padding: 15px;
 }
-@media(max-width:614px){
-  .parent{
+@media (max-width: 614px) {
+  .parent {
     max-width: 100%;
   }
 }
-@media(min-width:615px){
-  .parent{
+@media (min-width: 615px) {
+  .parent {
     max-width: 70%;
   }
 }
-@media(min-width:767px){
-  .parent{
+@media (min-width: 767px) {
+  .parent {
     max-width: 40%;
   }
 }
@@ -38,11 +39,11 @@ body {
 }
 input {
   width: 60px;
-  outline: none;
-  border: 0.5px solid #99999997;
-  border-radius: 3px;
+  border: 1px solid #99999997;
+  border-radius: 8px;
   height: 30px;
   padding: 5px;
+  outline: none;
 }
 label {
   font-size: 12px;
@@ -74,14 +75,14 @@ hr {
   cursor: pointer;
   background-color: purple;
 }
-@media(max-width:767px){
-  .btn button{
+@media (max-width: 767px) {
+  .btn button {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
   }
-  .btn{
+  .btn {
     margin-top: 30px;
   }
 }
@@ -96,7 +97,7 @@ button:hover {
 ul {
   padding-right: 15px;
   font-size: 30px;
-  font-weight:900;
+  font-weight: 900;
   list-style: none;
 }
 ul li {
@@ -107,11 +108,17 @@ span {
   font-size: 30px;
   font-weight: bolder;
 }
-/* Alert Styling */
-.spanDays , .spanMonths , .spanYears{
+/* Alert Styling */ 
+.spanDays,
+.spanMonths,
+.spanYears {
   font-size: 8px;
   font-weight: 600;
   color: red;
   margin: 3px 0 0 0;
   display: none;
+}
+/* Class Active */
+.active{
+  border-color:#009565;
 }
