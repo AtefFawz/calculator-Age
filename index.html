@@ -6,24 +6,34 @@
     <title>Birth-Day</title>
     <link rel="stylesheet" href="./styling/style.css" />
     <link rel="stylesheet" href="./styling/all.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="parent">
       <div class="container">
         <!-- Day  -->
         <div class="day">
-          <label for="">DAY</label>
+          <label for="day" class="lableDay">DAY</label>
           <input id="day" />
+          <span class="spanDays">Day is not valid</span>
         </div>
         <!-- Month  -->
         <div class="month">
-          <label for="">MONTH</label>
+          <label for="" class="lableMonth">MONTH</label>
           <input id="month" />
+          <span class="spanMonths">Month is not valid</span>
         </div>
         <!-- Years -->
         <div class="year">
-          <label for="">YEAR</label>
+          <label for="" class="lableYear">YEAR</label>
           <input id="year" />
+          <span class="spanYears">Year is not valid</span>
         </div>
       </div>
       <!-- End Container -->
@@ -31,8 +41,7 @@
       <div class="btn">
         <hr />
         <button>
-          <i class="fa-solid fa-arrow-down"></i>
-        </button>
+          <i class="fa-solid fa-stopwatch-20"></i>        </button>
       </div>
       <!-- End Button -->
       <div class="allSpan">
@@ -43,6 +52,9 @@
         </ul>
       </div>
     </div>
+    <!-- <div class="alert">
+      <p>this Ag</p>
+    </div> -->
     <!-- End Parent Container -->
     <script src="./scribting/main.js"></script>
   </body>
