@@ -8,17 +8,17 @@ body {
   display: flex;
   justify-content: center;
   padding: 1%;
-
 }
 .parent {
   width: 100%;
   background-color: white;
-  border-radius: 10px 70px;
+  border-radius: 10px 80px;
   padding: 15px;
 }
 @media (max-width: 614px) {
   .parent {
     max-width: 100%;
+    min-width: 95%;
   }
 }
 @media (min-width: 615px) {
@@ -28,7 +28,7 @@ body {
 }
 @media (min-width: 767px) {
   .parent {
-    max-width: 40%;
+    max-width: 50%;
   }
 }
 .container {
@@ -38,13 +38,19 @@ body {
   gap: 20px;
 }
 input {
-  width: 60px;
+  width: 70px;
   border: 1px solid #99999997;
   border-radius: 8px;
   height: 30px;
-  padding: 5px;
+  padding: 7px;
   outline: none;
 }
+@media (max-width: 340px) {
+  input {
+   max-width: 60%;
+  }
+}
+
 label {
   font-size: 12px;
   color: #4e4c4c;
@@ -108,7 +114,7 @@ span {
   font-size: 30px;
   font-weight: bolder;
 }
-/* Alert Styling */ 
+/* Alert Styling */
 .spanDays,
 .spanMonths,
 .spanYears {
@@ -119,6 +125,6 @@ span {
   display: none;
 }
 /* Class Active */
-.active{
-  border-color:#009565;
+.active {
+  border-color: #009565;
 }
